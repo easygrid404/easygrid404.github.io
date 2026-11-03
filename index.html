@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="bg">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Memory Grid</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header class="header">
+        <p class="eyebrow">Memory Grid</p>
+        <h1>4 × 4 квадратчета</h1>
+        <p class="subtitle" id="subtitle">Натисни Старт, за да започнеш три рунда.</p>
+      </header>
+
+      <section class="panel" id="start-panel">
+        <p class="hint">
+          Рунд 1 — 4 натискания &nbsp;·&nbsp; Рунд 2 — 5 натискания &nbsp;·&nbsp; Рунд 3 — 6 натискания. Едно квадратче може да се натисне повече от веднъж.
+        </p>
+        <button type="button" class="btn btn-primary" id="start-btn">Старт</button>
+      </section>
+
+      <section class="game hidden" id="game-panel" hidden>
+        <div class="meta">
+          <span class="pill" id="round-label">Рунд 1 / 3</span>
+          <span class="pill pill-muted" id="target-label">Направи 4 натискания</span>
+        </div>
+
+        <div class="grid" id="grid" aria-label="Мрежа 4 на 4"></div>
+
+        <div class="actions">
+          <button type="button" class="btn btn-ghost" id="reset-btn">Ресет</button>
+          <button type="button" class="btn btn-primary" id="next-btn" disabled>
+            Следващ рунд
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
